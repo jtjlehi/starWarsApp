@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { MatCardModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { CharacterListComponent } from './character-list/character-list.componen
     CharacterListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
