@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { characterListObj } from './character-list.obj';
 
 @Component({
   selector: 'app-character-list',
@@ -6,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-list.component.scss']
 })
 export class CharacterListComponent implements OnInit {
-  characters = [
-    {name: 'C-3P0'},
-    {name: 'Luke Skywalker'},
-    {name: 'Han Solo'}
-  ];
+  characters = characterListObj;
   constructor() { }
 
   ngOnInit() {
