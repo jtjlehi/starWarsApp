@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { CharacterListComponent } from './character-list/character-list.component';
+import { CharacterListComponent } from '../character-list/character-list.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { CharacterListFilterPipe } from '../character-list/character-list-filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    CharacterListFilterPipe
   ],
   imports: [
     BrowserModule,
