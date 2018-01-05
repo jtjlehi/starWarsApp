@@ -8,9 +8,19 @@ import { characterListObj } from './character-list.obj';
 })
 export class CharacterListComponent implements OnInit {
   characters = characterListObj;
-  constructor() { }
-
-  ngOnInit() {
+  testProp: string;
+  constructor() {
+    this.testProp = 'test prop';
   }
 
+  ngOnInit() {
+    console.log('hi there');
+    this.logTestProp();
+  }
+  logTestProp() {
+    console.log(this.testProp);
+  }
+  displayCharInfo() {
+    console.log('character info');
+  }
 }

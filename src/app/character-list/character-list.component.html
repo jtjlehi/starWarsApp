@@ -2,7 +2,8 @@
     <h3>Character List</h3>
     <mat-list>
         <mat-list-item *ngFor='let character of characters'>
-            <img mat-list-avatar [src]='character.avatar'>
+            <img mat-list-avatar [src]='character.avatar' 
+            (click)='displayCharInfo'>
             {{character.name | uppercase}}
         </mat-list-item>
     </mat-list>

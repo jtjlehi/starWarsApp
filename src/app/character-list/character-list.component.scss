@@ -1,0 +1,10 @@
+mat-list-item {
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition-property: letter-spacing;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+mat-list-item:hover {
+    letter-spacing: 4px;
+}
