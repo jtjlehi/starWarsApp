@@ -1,4 +1,6 @@
-export let characterListObj = [
+import { Character } from "../model/Character";
+
+export let characterListObj: Character[] = [
     {
 		"id": "luke-skywalker",
 		"name": "Luke Skywalker",
