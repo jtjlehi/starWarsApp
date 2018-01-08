@@ -10,6 +10,9 @@
             (click)='displayCharInfo'>
             <h3 matLine>{{character.name | uppercase}}</h3>
             <p matLine>{{character.gender}} -- {{character.birth_year}} </p>
+            <p matLine>
+                <app-force [force]='character.force'></app-force>
+            </p>
         </mat-list-item>
     </mat-list>
 </mat-card>

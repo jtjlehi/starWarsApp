@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-force',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForceComponent implements OnInit {
 
-  constructor() { }
+  @Input() force: number;
+  divWidth: number;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.divWidth = this.force * 26.7;
   }
 
 }
