@@ -1,10 +1,15 @@
 <mat-card>
     <h3>Character List</h3>
+
+    <input [(ngModel)]="filterBy"/>
+
     <mat-list>
-        <mat-list-item *ngFor='let character of characters'>
+        <mat-list-item 
+        *ngFor='let character of characters | characterFilter : filterBy'>
             <img mat-list-avatar [src]='character.avatar' 
             (click)='displayCharInfo'>
-            {{character.name | uppercase}}
+            <h3 matLine>{{character.name | uppercase}}</h3>
+            <p matLine>{{character.gender}} -- {{character.birth_year}} </p>
         </mat-list-item>
     </mat-list>
 </mat-card>

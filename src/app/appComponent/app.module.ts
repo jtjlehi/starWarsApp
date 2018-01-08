@@ -5,8 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CharacterListComponent } from '../character-list/character-list.component';
 import { MatCardModule } from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { CharacterListFilterPipe } from '../character-list/character-list-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CharacterListFilterPipe } from '../character-list/character-list-filter
   imports: [
     BrowserModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

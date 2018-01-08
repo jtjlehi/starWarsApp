@@ -9,6 +9,7 @@ import { characterListObj } from './character-list.obj';
 export class CharacterListComponent implements OnInit {
   characters = characterListObj;
   testProp: string;
+  filterBy: string;
   constructor() {
     this.testProp = 'test prop';
   }
