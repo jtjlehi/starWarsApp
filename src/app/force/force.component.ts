@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-force',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ForceComponent implements OnInit {
 
   @Input() force: number;
+  @Output() forceStrengthClicked: EventEmitter<string> = new EventEmitter<string>();
   divWidth: number;
 
   constructor() {
@@ -15,6 +16,9 @@ export class ForceComponent implements OnInit {
 
   ngOnInit() {
     this.divWidth = this.force * 26.7;
+  }
+  onForceClicked() {
+    this.forceStrengthClicked.emit('this is a message saying the force element was clicked');
   }
 
 }

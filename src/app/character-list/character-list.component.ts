@@ -24,4 +24,7 @@ export class CharacterListComponent implements OnInit {
   displayCharInfo() {
     console.log('character info');
   }
+  onNotify(message: string) {
+    console.log(message);
+  }
 }

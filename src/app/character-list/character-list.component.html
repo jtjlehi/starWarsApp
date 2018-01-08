@@ -11,7 +11,9 @@
             <h3 matLine>{{character.name | uppercase}}</h3>
             <p matLine>{{character.gender}} -- {{character.birth_year}} </p>
             <p matLine>
-                <app-force [force]='character.force'></app-force>
+                <app-force 
+                [force]='character.force' 
+                (forceStrengthClicked)='onNotify($event)'></app-force>
             </p>
         </mat-list-item>
     </mat-list>
