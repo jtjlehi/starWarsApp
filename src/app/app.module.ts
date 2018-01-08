@@ -8,13 +8,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { CharacterListFilterPipe } from '../character-list/character-list-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { ForceComponent } from './force/force.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterListComponent,
-    CharacterListFilterPipe
+    CharacterListFilterPipe,
+    ForceComponent
   ],
   imports: [
     BrowserModule,
