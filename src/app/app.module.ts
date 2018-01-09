@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CharacterListFilterPipe } from './character-list/character-list-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { ForceComponent } from './force/force.component';
+import { CharacterService } from './services/character.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ForceComponent } from './force/force.component';
     MatIconModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
