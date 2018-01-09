@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { characterListObj } from './character-list.obj';
 import { CharacterService } from '../services/character.service';
+import { Character } from '../model/Character';
 
 @Component({
   selector: 'app-character-list',
@@ -8,19 +8,12 @@ import { CharacterService } from '../services/character.service';
   styleUrls: ['./character-list.component.scss']
 })
 export class CharacterListComponent implements OnInit {
-  characters = characterListObj;
-  testProp: string;
+  characters: Character[];
   filterBy: string;
-  constructor(private characterService: CharacterService) {
-    this.testProp = 'test prop';
-  }
+  constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
-    console.log('hi there');
-    this.logTestProp();
-  }
-  logTestProp() {
-    console.log(this.testProp);
+    this.characters = this.characterService.getCharacters();
   }
   displayCharInfo() {
     console.log('character info');

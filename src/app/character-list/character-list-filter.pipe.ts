@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { Character } from "../model/Character";
-import { characterListObj } from "./character-list.obj";
 
 @Pipe({
     name: 'characterFilter'
