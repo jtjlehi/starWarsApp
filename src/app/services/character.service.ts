@@ -9,4 +9,7 @@ export class CharacterService {
     getCharacters(): Character[] {
         return characterListObj;
     }
+    hitServer(): void {
+        console.log('hit server does not hit the server');
+    }
 }
