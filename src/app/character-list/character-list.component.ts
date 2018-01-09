@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { characterListObj } from './character-list.obj';
+import { CharacterService } from '../services/character.service';
 
 @Component({
   selector: 'app-character-list',
@@ -10,7 +11,7 @@ export class CharacterListComponent implements OnInit {
   characters = characterListObj;
   testProp: string;
   filterBy: string;
-  constructor() {
+  constructor(private characterService: CharacterService) {
     this.testProp = 'test prop';
   }
 
